@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { loginRequest, useAuthorizedUser, useLoading } from "../authSlice";
+import { loginRequest, useLoading } from "../authSlice";
 import Loader from "../../../Components/Loader";
 import { useNavigate } from "react-router-dom";
 import useAuthorization from "../../../hooks/useAuthorization";
@@ -9,7 +9,6 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const loading = useLoading();
-  ("");
   const { isAuthorized } = useAuthorization();
 
   const [values, setValues] = useState({ userName: "", password: "" });
